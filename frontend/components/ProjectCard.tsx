@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
 declare type Project = {
         id:number,
         title:string,
@@ -30,7 +31,7 @@ export function ProjectCard({id,title,des,img,iconLists,link}:Project) {
         >
           {des}
         </CardItem>
-        <CardItem translateZ="80" className="w-full mt-3">
+        <CardItem translateZ="80" className="w-full mt-5">
           <Image
             src={img}
             height="240"
@@ -39,13 +40,13 @@ export function ProjectCard({id,title,des,img,iconLists,link}:Project) {
             alt="thumbnail"
           />
         </CardItem>
-        <div className="flex justify-between items-center mt-16">
+        <div className="flex justify-between items-center mt-16 ">
           <CardItem
             translateZ={15}
             as={Link}
             href="https://twitter.com/mannupaaji"
             target="__blank"
-            className="px-3 py-1 rounded-xl text-xs font-normal dark:text-white"
+            className="px-3 py-1 rounded-xl text-xs font-normal dark:text-white flex gap-2"
           >
             {iconLists.map((icon,index)=>{
               return <Image src={icon} height="40" width="20" alt="icon" key={index}/>
@@ -54,10 +55,10 @@ export function ProjectCard({id,title,des,img,iconLists,link}:Project) {
           <CardItem
             translateZ={15}
             as="button"
-            className="px-3 py-1 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+            className="px-2 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-black text-xs font-bold"
           >
             <Link href={link} target="__blank">
-                 View
+                 {<FaGithub/>}
             </Link>
           </CardItem>
         </div>
