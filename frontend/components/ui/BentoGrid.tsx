@@ -5,7 +5,7 @@ import Lottie from "react-lottie";
 import { cn } from "@/utils/cn";
 import { BackgroundGradientAnimation } from "./BackGroundAnimation";
 import GridGlobe from "./GridGlobe";
-import animationData from "@/frontend/data/confetti.json";
+import animationData from "../../data/confetti.json" ;
 import MagicButton from "./MagicButton";
 import { toast } from 'react-toastify';
 
