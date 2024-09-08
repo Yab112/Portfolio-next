@@ -1,12 +1,13 @@
 "use client";
 import { useState, useEffect } from "react";
 import { IoCopyOutline } from "react-icons/io5";
-// import Lottie from "react-lottie";
+import Lottie from "react-lottie";
 import { cn } from "@/utils/cn";
 import { BackgroundGradientAnimation } from "./BackGroundAnimation";
 import GridGlobe from "./GridGlobe";
-import animationData from "@/data/confetti.json";
+import animationData from "@/frontend/data/confetti.json";
 import MagicButton from "./MagicButton";
+import { toast } from 'react-toastify';
 
 export const BentoGrid = ({
   className,
@@ -18,7 +19,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-2 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto",
+        "grid grid-cols-1 md:grid-cols-5 sm:grid-cols-5 md:grid-row-4 gap-4 lg:gap-8 mx-auto",
         className
       )}
     >
@@ -62,14 +63,27 @@ export const BentoGridItem = ({
     autoplay: copied,
     animationData: animationData,
     rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
+    preserveAspectRatio: "xMidYMid slice",
     },
   };
 
   const handleCopy = () => {
-    const text = "hsu@jsmastery.pro";
+    const text = "eshetieyabibal@gmail.com";
     navigator.clipboard.writeText(text);
-    setCopied(true);
+    setCopied(!copied);
+    {!copied && toast.success("My email is now in your clipboard. Looking forward to your message!", {
+      position: "top-right",
+      autoClose: 3000,  // Time in milliseconds before the toast automatically closes
+      hideProgressBar: false,  // Hide or show the progress bar
+      closeOnClick: true,
+      pauseOnHover: false,  // Pause the timer when hovered
+      draggable: true,  // Enable drag to dismiss
+      theme: "dark",  // 'light', 'dark', or 'colored'
+      className: 'custom-toast' // Custom class for styling
+    })}
+    setTimeout(() => {
+      setCopied(false);
+    }, 8000);
   };
 
   return (
@@ -79,6 +93,7 @@ export const BentoGridItem = ({
         className
       )}
       style={{
+        height: "80 %",
         background: "rgb(4,7,29)",
         backgroundColor:
           "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
@@ -165,9 +180,8 @@ export const BentoGridItem = ({
                   copied ? "block" : "block"
                 }`}
               >
-                {/* <Lottie options={defaultOptions} height={200} width={400} /> */}
+                <Lottie options={defaultOptions} height={100} width={400} />
               </div>
-
               <MagicButton
                 title={copied ? "Email is Copied!" : "Copy my email address"}
                 icons={<IoCopyOutline />}
@@ -175,6 +189,7 @@ export const BentoGridItem = ({
                 handleclick={handleCopy}
                 otherClasses="!bg-[#161A31]"
               />
+  
             </div>
           )}
         </div>
