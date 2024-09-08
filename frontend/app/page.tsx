@@ -32,7 +32,7 @@ export default function Home() {
         ]}/>
         <Hero />
         <Grid/>
-        <ToastContainer />
+        <ToastContainer/>
         <RecentProjects/>
       </div>
     </main>
