@@ -1,7 +1,12 @@
 import mongoose  from 'mongoose';
 
 const contactSchema = new mongoose.Schema({
-  fullName: {
+  firstname: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  lastname: {
     type: String,
     required: true,
     trim: true
@@ -10,14 +15,6 @@ const contactSchema = new mongoose.Schema({
     type: String,
     required: true,
     trim: true
-  },
-  phoneNumber: {
-    type: String,
-    required: true
-  },
-  address: {
-    type: String,
-    required: true
   },
   message: {
     type: String,
