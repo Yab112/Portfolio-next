@@ -67,7 +67,7 @@ export const sendEmail = async (req, res) => {
     const clientMailOptions = {
       from: 'your-email@gmail.com',
       to: email,  
-      subject: 'Thank You for Contacting Us!',
+      subject: 'Thank You for Contacting Me!',
       html: `
         <div style="font-family: Arial, sans-serif; padding: 30px; background-color: #f0f8ff; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
           <h2 style="color: #1e90ff; text-align: center; font-size: 28px; margin-bottom: 20px;">Thank You for Contacting Me!</h2>
