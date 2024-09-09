@@ -3,7 +3,7 @@ declare type buttonprops = {
   title:string
   icons:React.ReactNode
   position:string 
-  handleclick?: () => void;
+  handleclick?: (e: React.MouseEvent<HTMLButtonElement> | React.FormEvent<HTMLFormElement>) => void;
   otherClasses ?:string
 }
 

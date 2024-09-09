@@ -16,8 +16,8 @@ declare type Project = {
 };
 export function ProjectCard({id,title,des,img,iconLists,link}:Project) {
   return (
-    <CardContainer className="inter-var">
-      <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-40 h-40 sm:w-[24rem] h-auto rounded-xl p-4 border  ">
+    <CardContainer className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]">
+      <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-80  sm:w-[24rem] h-auto rounded-xl p-4 border  ">
         <CardItem
           translateZ="40"
           className="text-lg font-bold text-neutral-600 dark:text-white"
@@ -46,7 +46,7 @@ export function ProjectCard({id,title,des,img,iconLists,link}:Project) {
             as={Link}
             href="https://twitter.com/mannupaaji"
             target="__blank"
-            className="px-3 py-1 rounded-xl text-xs font-normal dark:text-white flex gap-2"
+            className="px-3 py-1 rounded-full bg-white-100 -left-1 text-xs font-normal dark:text-white flex gap-2 "
           >
             {iconLists.map((icon,index)=>{
               return <Image src={icon} height="40" width="20" alt="icon" key={index}/>

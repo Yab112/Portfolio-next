@@ -1,8 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer base {
+  /* Hide scrollbar for Webkit browsers */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  /* Gradient border */
+  .border-gradient {
+    border: 2px solid;
+    border-image: linear-gradient(to right, var(--primary), var(--secondary));
+    border-image-slice: 1;
+  }
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
