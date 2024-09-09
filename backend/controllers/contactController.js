@@ -4,10 +4,10 @@ import nodemailer from 'nodemailer';
 // Handle form submission
 export const submitContactForm = async (req, res) => {
   try {
-    const { firstname,lastname, email, message } = req.body;
+    const { firstname,lastname, email, message,address,phone } = req.body;
 
     // Validation
-    if (!firstname || !email || !lastname || !message) {
+    if (!firstname || !email || !lastname || !message || !address || !phone) {
       return res.status(400).json({ error: 'All fields are required' });
     }
 
@@ -17,6 +17,8 @@ export const submitContactForm = async (req, res) => {
       lastname,
       email,
       message,
+      address,
+      phone,
     });
 
     await newContact.save();
@@ -31,7 +33,7 @@ export const submitContactForm = async (req, res) => {
 
 export const sendEmail = async (req, res) => {
   try {
-    const { firstname, email,lastname, message } = req.body;
+    const { firstname, email,lastname, message,address,phone } = req.body;
 
     // Create transporter object
     const transporter = nodemailer.createTransport({
@@ -52,6 +54,8 @@ export const sendEmail = async (req, res) => {
           <h2 style="color: #2196F3;">New Contact Form Submission</h2>
           <p><strong>Full Name:</strong> ${firstname}  ${lastname}</p>
           <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Address:</strong> ${address}</p>
+          <p><strong>Phone-Number:</strong> ${phone}</p>
           <p><strong>Message:</strong> ${message}</p>
           <hr style="border-top: 1px solid #ddd;">
           <p style="color: #4CAF50;">You have a new potential client!</p>
@@ -63,7 +67,7 @@ export const sendEmail = async (req, res) => {
     const clientMailOptions = {
       from: 'your-email@gmail.com',
       to: email,  
-      subject: 'Thank You for Contacting Us!',
+      subject: 'Thank You for Contacting Me!',
       html: `
         <div style="font-family: Arial, sans-serif; padding: 30px; background-color: #f0f8ff; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
           <h2 style="color: #1e90ff; text-align: center; font-size: 28px; margin-bottom: 20px;">Thank You for Contacting Me!</h2>
@@ -77,6 +81,8 @@ export const sendEmail = async (req, res) => {
           <p style="font-size: 18px; color: #333;">Here's a summary of the information you provided:</p>
           <ul style="list-style-type: none; padding-left: 0; font-size: 16px;">
             <li style="margin-bottom: 10px;"><strong style="color: #0066cc;">Email:</strong> ${email}</li>
+            <li style="margin-bottom: 10px;"><strong style="color: #0066cc;">Address:</strong> ${address}</li>
+            <li style="margin-bottom: 10px;"><strong style="color: #0066cc;">Phone-Number:</strong> ${phone}</li>
           </ul>
           <p style="font-size: 16px;">If any of this information is incorrect, please let me know.</p>
           <p style="color: #2e8b57; font-size: 18px; font-weight: bold; margin-top: 20px;">Looking forward to helping you further!</p>

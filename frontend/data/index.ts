@@ -72,29 +72,30 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
+    title: "YabStore",
+    des: "YabStore is a modern e-commerce platform providing a seamless online shopping experience. Includes frontend and backend implementations with features like user authentication, product browsing, cart management, and order processing.",
+    img: "/p1.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "/ui.earth.com",
+    link: "/ui.yabstore.com",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "/ui.yoom.com",
+    title: "GUZO",
+    des: "GUZO.et is a leading online travel platform in Ethiopia offering comprehensive travel services including air ticketing, hotel bookings, homestays, holiday packages, and more. Aims to provide a superior user experience for travelers through its website and mobile apps.",
+    img: "/p2.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    link: "guzo.com",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
+    title: "Jami",
+    des: "As a frontend developer, built a beautifully designed UI and implemented functionality for Jami.",
     img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "/ui.aiimg.com",
+    iconLists:  ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    link: "jami.com",
   }
 ];
+
 
 export const testimonials = [
   {
@@ -165,33 +166,34 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "MERN Stack Developer | Pixel Technology",
+    desc: "Designed, developed, and maintained scalable web applications using MongoDB, Express.js, React.js, and Node.js. Played a crucial role in implementing efficient and responsive user interfaces, integrating backend APIs, and optimizing application performance.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "Full-Stack Web Developer | Mereb Technologies",
+    desc: "Contributed to designing and developing highly efficient web applications using technologies such as TypeScript, Angular, React, JavaScript, Express, .NET, MongoDB, AWS, and Firebase. Played a pivotal role in delivering robust solutions to complex problems.",
+    className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "Frontend Developer | Cnet Software Technology PLC",
+    desc: "Key member in the development of a delivery application for EatAddis. Focused on the development and ongoing maintenance of the frontend system and dashboard.",
+    className: "md:col-span-2",
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    title: "Working on Personal Projects",
+    desc: "Developing and maintaining personal projects to stay up-to-date with the latest technologies and trends in the industry.",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },
 ];
+
 
 export const socialMedia = [
   {

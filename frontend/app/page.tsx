@@ -11,29 +11,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import Experiance from "@/components/Experiance";
 import Footer from "@/components/Footer";
 import { SignupFormDemo } from "@/components/SignupFormDemo";
+import { navItems } from "@/data";
 
 export default function Home() {
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
       <div className="max-w-[100vw] w-full ">
-        <FloatingNav navItems={[
-          {
-            name: "About",
-            link: "/about",
-            icon:<FaHome/>
-          },
-          {
-            name: "Projects",
-            link: "/projects",
-            icon:<FaRProject/>
-
-          },
-          {
-            name: "Contact",
-            link: "/contact",
-            icon:<FaContao/>
-          },
-        ]}/>
+      <FloatingNav navItems={navItems} />
         <Hero />
         <Grid/>
         <ToastContainer/>

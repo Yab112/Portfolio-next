@@ -1,8 +1,11 @@
-import { FaLocationArrow } from "react-icons/fa6";
+"use client"
+import { FaDownload, FaLocationArrow } from "react-icons/fa6";
 
 import MagicButton from "./ui/MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const Hero = () => {
   return (
@@ -41,32 +44,36 @@ const Hero = () => {
       </div>
 
       <div className="flex justify-center relative my-20 z-10">
+        <img
+          src="/hola.png"
+          alt="me hola"
+          className="w-20 h-20 lg:w-[400px] lg:h-[400px] block lg:block text-sm lg:text-base"
+        />
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Dynamic Web Magic with Cool Web Stacks
-          </p>
-
-          {/**
-           *  Link: https://ui.aceternity.com/components/text-generate-effect
-           *
-           *  change md:text-6xl, add more responsive code
-           */}
           <TextGenerateEffect
-            words="Transforming Concepts into Seamless User Experiences"
+            words="Hi! I'm Yabibal, a Web Developer based in Ethiopia."
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Yabibal, a Web Developer based in Ethiopia.
+            based in Ethiopia.
           </p>
 
-          <a href="#about">
-            <MagicButton
-              title="Show my work"
-              icons={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
+          <div className="flex flex-wrap gap-2 justify-center items-center mt-4 text-black">
+            <a href="#about">
+              <MagicButton
+                title="Show my work"
+                icons={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
+            <a href="/files/Myresume.pdf" download="Myresume.pdf">
+              <button className="rounded-full p-3 bg-gradient-to-r from-purple-500 mt-7 to-blue-500 text-white font-semibold hover:shadow-lg transition-all duration-300 flex items-center space-x-2 cursor-pointer">
+                <span>Download CV</span>
+                <FaDownload className="animate-bounce" />
+              </button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
