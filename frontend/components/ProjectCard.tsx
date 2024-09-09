@@ -43,10 +43,8 @@ export function ProjectCard({id,title,des,img,iconLists,link}:Project) {
         <div className="flex justify-between items-center mt-16 ">
           <CardItem
             translateZ={15}
-            as={Link}
-            href="https://twitter.com/mannupaaji"
             target="__blank"
-            className="px-3 py-1 rounded-full bg-white-100 -left-1 text-xs font-normal dark:text-white flex gap-2 "
+            className="px-3 py-1  flex gap-2 "
           >
             {iconLists.map((icon,index)=>{
               return <Image src={icon} height="40" width="20" alt="icon" key={index}/>
@@ -57,7 +55,7 @@ export function ProjectCard({id,title,des,img,iconLists,link}:Project) {
             as="button"
             className="px-2 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-black text-xs font-bold"
           >
-            <Link href={link} target="__blank">
+            <Link href={"https://github.com/Yab112"} target="__blank">
                  {<FaGithub/>}
             </Link>
           </CardItem>
