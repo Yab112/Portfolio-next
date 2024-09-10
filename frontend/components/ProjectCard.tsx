@@ -6,12 +6,12 @@ import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 declare type Project = {
-        id:number,
+        id?:number,
         title:string,
         des:string,
         img:string,
         iconLists:string[],
-        link:string
+        link?:string
   
 };
 export function ProjectCard({id,title,des,img,iconLists,link}:Project) {
