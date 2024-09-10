@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTelegram } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaSkype, FaTelegram } from "react-icons/fa6";
 import { BackgroundLines } from "./ui/background-lines";
 import { BackgroundBeamsWithCollision } from "./ui/BackgroundBeamsWithCollision";
 
@@ -28,6 +28,12 @@ const RevelCard = () => {
             className="text-orange-500  text-3xl"
           >
             <FaLinkedin/>
+          </a>
+          <a 
+          target="_blank"
+          href="
+          https://join.skype.com/invite/B3guG5P2q1sl" className="text-orange-500  text-3xl">
+                <FaSkype/>
           </a>
           <a href="https://t.me/anoni670" target="_blank" className="text-orange-500  text-3xl"><FaTelegram/></a>
         </div>
