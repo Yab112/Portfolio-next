@@ -1,5 +1,5 @@
 import {InfiniteMovingCards} from "./ui/InfiniteMovingCards"
-import {companies, testimonials} from "../data";
+import {testimonials} from "../data";
 const Clients = () => {  return (
     <section className="py-12" id="testimonials">
        <h1 className="heading">

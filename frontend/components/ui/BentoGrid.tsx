@@ -8,6 +8,13 @@ import GridGlobe from "./GridGlobe";
 import animationData from "../../data/confetti.json" ;
 import MagicButton from "./MagicButton";
 import { toast } from 'react-toastify';
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
+import TechStackCard from "../TechStackCard";
+
 
 export const BentoGrid = ({
   className,
@@ -138,15 +145,25 @@ export const BentoGridItem = ({
             {description}
           </div>
           <div
-            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
+            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10 flex flex-col`}
           >
+            
             {title}
+            {id === 3 &&
+            <Popover >
+            <PopoverTrigger className="self-start text-xl border border-white-100 rounded-md mt-4 px-4 py-2">View All</PopoverTrigger>
+            <PopoverContent>
+               <TechStackCard/>
+            </PopoverContent>
+            </Popover>}
           </div>
 
           {id === 2 && <GridGlobe />}
+          
 
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
+              
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
                 {leftLists.map((item, i) => (
                   <span
@@ -171,6 +188,7 @@ export const BentoGridItem = ({
                   </span>
                 ))}
               </div>
+              
             </div>
           )}
           {id === 6 && isClient && (
