@@ -12,6 +12,7 @@ import Experiance from "@/components/Experiance";
 import Footer from "@/components/Footer";
 import { SignupFormDemo } from "@/components/SignupFormDemo";
 import { navItems } from "@/data";
+import RevelCard from "@/components/Footer2";
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
         <Clients/>
         <Experiance/>
         <Footer/>
-        
+        <RevelCard/>
       </div>
 
     </main>

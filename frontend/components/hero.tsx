@@ -6,6 +6,7 @@ import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { BackgroundLines } from "./ui/background-lines";
 
 const Hero = () => {
   return (
@@ -44,14 +45,16 @@ const Hero = () => {
       </div>
 
       <div className="flex justify-center relative my-20 z-10">
-        <img
-          src="/hola.png"
-          alt="me hola"
-          className="w-20 h-20 lg:w-[400px] lg:h-[400px] block lg:block text-sm lg:text-base"
-        />
+          <BackgroundLines className="flex items-center justify-center w-full flex-col px-4 absolute -inset-6 opacity-30  left-0">
+          </BackgroundLines>
+              <img
+                src="/hola.png"
+                alt="me hola"
+                className="w-20 h-20 lg:w-[400px] lg:h-[400px] block lg:block text-sm lg:text-base"
+              />
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <TextGenerateEffect
-            words="Hi! I'm Yabibal, a Web Developer based in Ethiopia."
+            words="Hi! I'm Yabibal, a Web Developer ."
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
