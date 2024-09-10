@@ -49,7 +49,7 @@ To get started with this project, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/portfolio-with-motion-framer.git
+    git clone https://github.com/Yab112/portfolio-with-motion-framer.git
     ```
 2. Navigate to the front-end directory:
     ```bash
@@ -68,7 +68,7 @@ To get started with this project, follow these steps:
 
 1. Clone the repository (if you haven't already):
     ```bash
-    git clone https://github.com/yourusername/backend.git
+    git clone https://github.com/Yab112/backend.git
     ```
 2. Navigate to the back-end directory:
     ```bash
