@@ -44,15 +44,17 @@ const Hero = () => {
       </div>
 
       <div className="flex justify-center relative my-20 z-10">
-          <BackgroundLines className="flex items-center justify-center w-full flex-col px-4 absolute -inset-6 opacity-30  left-0">
-          </BackgroundLines>
               <Image
                 src="/hola.png"
-                alt="me hola"
-                width={100}
-                height={100}
-                className="w-20 h-20 lg:w-[400px] lg:h-[400px] block lg:block text-sm lg:text-base"
+                alt="me-hola"
+                width={400}
+                height={400}
+                className="w-20 h-20 lg:w-[400px] lg:h-[400px] block lg:block text-sm lg:text-base z-50"
+                quality={100}
+                // priority
               />
+          <BackgroundLines className="flex items-center justify-center w-full flex-col px-4 absolute -inset-6 opacity-30  left-0">
+          </BackgroundLines>
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <TextGenerateEffect
             words="Hi! I'm Yabibal, a Web Developer ."
