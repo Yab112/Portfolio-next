@@ -4,9 +4,8 @@ import { FaDownload, FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./ui/MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
-import axios from "axios";
-import { toast } from "react-toastify";
 import { BackgroundLines } from "./ui/background-lines";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -47,7 +46,7 @@ const Hero = () => {
       <div className="flex justify-center relative my-20 z-10">
           <BackgroundLines className="flex items-center justify-center w-full flex-col px-4 absolute -inset-6 opacity-30  left-0">
           </BackgroundLines>
-              <img
+              <Image
                 src="/hola.png"
                 alt="me hola"
                 className="w-20 h-20 lg:w-[400px] lg:h-[400px] block lg:block text-sm lg:text-base"

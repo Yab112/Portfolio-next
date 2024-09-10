@@ -1,5 +1,4 @@
 import { FaGithub, FaLinkedin, FaSkype, FaTelegram } from "react-icons/fa6";
-import { BackgroundLines } from "./ui/background-lines";
 import { BackgroundBeamsWithCollision } from "./ui/BackgroundBeamsWithCollision";
 
 const RevelCard = () => {

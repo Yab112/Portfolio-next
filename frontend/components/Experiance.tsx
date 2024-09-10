@@ -1,5 +1,6 @@
 import { workExperience } from "@/data"
 import { Button } from "./ui/moving-border"
+import Image from "next/image"
 
 const Experiance = () => {
     return (
@@ -22,7 +23,7 @@ const Experiance = () => {
               }}
             >
               <div className="flex p-4">
-                <img src={card.thumbnail} alt={card.thumbnail} className="w-40 h-40 object-cover mb-4" />
+                <Image src={card.thumbnail} alt={card.thumbnail} className="w-40 h-40 object-cover mb-4" />
                 <div className="flex flex-col max-w-[70%] items-start justify-center">
                   <h1 className="text-xl font-bold mb-2 self-center">{card.title}</h1>
                   <p className="text-white-100 font-semibold">
