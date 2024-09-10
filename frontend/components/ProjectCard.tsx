@@ -54,9 +54,11 @@ export function ProjectCard({title, des, img, iconLists, link}: Project) {
             as="button"
             className="px-2 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-black text-xs font-bold"
           >
-            <Link href={link} target="_blank">
-              <FaGithub/>
-            </Link>
+            {link && (
+              <Link href={link} target="_blank">
+                <FaGithub/>
+              </Link>
+            )}
           </CardItem>
         </div>
       </CardBody>
