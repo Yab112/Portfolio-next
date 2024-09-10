@@ -49,6 +49,8 @@ const Hero = () => {
               <Image
                 src="/hola.png"
                 alt="me hola"
+                width={100}
+                height={100}
                 className="w-20 h-20 lg:w-[400px] lg:h-[400px] block lg:block text-sm lg:text-base"
               />
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
