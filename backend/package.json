@@ -5,7 +5,9 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "build":"tsc",
+    "start":"node dist/server.js"
   },
   "keywords": [],
   "author": "",
