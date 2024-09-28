@@ -33,7 +33,7 @@ export function SignupFormDemo() {
     e.preventDefault();
     setLoading(true); // Set loading to true when submitting
     try {
-      const contactResponse = await axios.post('http://localhost:8000/contact', data, {
+      const contactResponse = await axios.post(`${process.env.BAIT_API_URL}/contact`, data, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -43,7 +43,7 @@ export function SignupFormDemo() {
         throw new Error('Failed to save data');
       }
 
-      const emailResponse = await axios.post('http://localhost:8000/sendemail', data, {
+      const emailResponse = await axios.post(`${process.env.BAIT_API_URL}/sendemail`, data, {
         headers: {
           'Content-Type': 'application/json',
         },
