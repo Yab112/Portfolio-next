@@ -7,7 +7,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import Footer from "@/components/Footer";
 import { navItems } from "@/data";
 import RevelCard from "@/components/Footer2";
-import AdvancedVisualizationShowcase from "@/components/Visulization";
 
 export default function Home() {
   return (
