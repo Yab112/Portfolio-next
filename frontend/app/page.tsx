@@ -3,12 +3,11 @@ import Hero from "@/components/hero";
 import RecentProjects from "@/components/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { ToastContainer } from 'react-toastify';
-import Clients from "@/components/Clients";
 import 'react-toastify/dist/ReactToastify.css';
-import Experiance from "@/components/Experiance";
 import Footer from "@/components/Footer";
 import { navItems } from "@/data";
 import RevelCard from "@/components/Footer2";
+import AdvancedVisualizationShowcase from "@/components/Visulization";
 
 export default function Home() {
   return (
@@ -19,8 +18,6 @@ export default function Home() {
         <Grid/>
         <ToastContainer/>
         <RecentProjects/>
-        <Clients/>
-        <Experiance/>
         <Footer/>
         <RevelCard/>
       </div>
