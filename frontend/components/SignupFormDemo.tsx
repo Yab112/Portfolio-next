@@ -31,7 +31,7 @@ export function SignupFormDemo() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setLoading(true); // Set loading to true when submitting
+    setLoading(true); 
     try {
       const contactResponse = await axios.post(`${process.env.BAIT_API_URL}/contact`, data, {
         headers: {
